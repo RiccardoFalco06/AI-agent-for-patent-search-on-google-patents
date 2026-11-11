@@ -211,7 +211,7 @@ def build_agent(api_key: Optional[str] = None) -> Agent:
     """Costruisce e restituisce l'agente agno."""
     key = api_key or os.environ.get("GOOGLE_API_KEY")
     if not key:
-        print("❌ ANTHROPIC_API_KEY non trovata. Impostala con:\n   export ANTHROPIC_API_KEY=sk-...")
+        print("❌ GOOGLE_API_KEY non trovata. Impostala nel file .env:\n   GOOGLE_API_KEY=...")
         sys.exit(1)
  
     tool = GooglePatentsTool()
@@ -236,7 +236,7 @@ def build_agent(api_key: Optional[str] = None) -> Agent:
  
 def main():
     print("=" * 60)
-    print("  🔍 PATENT SEARCH AGENT - powered by agno + Claude")
+    print("  🔍 PATENT SEARCH AGENT - powered by agno + Gemini")
     print("=" * 60)
     print()
  
